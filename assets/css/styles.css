@@ -1,228 +1,193 @@
 /* 
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Playfair Display', serif;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Lora', serif;
 */
+
+:root {
+    --text-color: #333;
+}
 
 * {
     box-sizing: inherit;
 }
 
-
 html {
+    box-sizing: border-box;
     line-height: 1.6rem;
     font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #181719;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
 }
 
 ul {
-    list-style: none;
     padding-left: 0;
-    margin: 0;
+    list-style: none;
 }
 
+.container {
+    max-width: 970px!important;
+}
 
-/* navbar */
-.navbar {
-    width: 100%;
-    padding: 30px 0;
-    display: flex;
+/* Header */
+.header {
+    margin-top: 52px;
+}
+
+.recipe-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #000;
+}
+
+.recipe-intro {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    color: #4F4F4F;
+    max-width: 585px;
     margin-bottom: 30px;
-}
-
-.navbar__store-name-wrap {
-    flex: 1;
-}
-
-.navbar__store-name {
-    font-family: 'Crimson Pro', serif;
-    width: 120px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 200;
-    padding: 0 8px;
-    display: block;
-    border: 1px solid #fff;
-}
-
-.navbar__store-name:hover {
-    color: #181719;
-    background-color: #fff;
-}
-
-.navbar__list {
     display: flex;
 }
 
-.navbar__item {
-    margin-left: 86px;
+.recipe-intro-icon {
+    margin-top: 6px;
+    margin-right: 12px;
 }
 
-.navbar__item:hover {
-    transform: translateY(-10%);
-}
-
-.navbar__item-link {
-    font-weight: 500;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.navbar__item-link.navbar__item-link--active {
-    font-weight: 700;
-}
-
-/* nav mobile */
-.navbar__icon {
-    font-size: 24px;
-    color: #F2F2F2;
-    display: none;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-color: #181719;
-    display: flex;
-    transform: translateY(-100%);
-    opacity: 0;
-    will-change: transform;
-    transition: all linear 0.3s;
-}
-
-.navbar__input {
-    display: none;
-}
-
-.navbar__input:checked ~ .overlay {
-    color: #F2F2F2;
-    transform: translateY(0%);
-    opacity: 1;
-}
-
-.navbar__close-icon {
-    position: absolute;
-    font-size: 30px;
-    margin: 20px;
-    right: 0;
-}
-
-.navbar__list-mobile {
-    margin: auto;
-    text-align: center;
-}
-
-/* product */
-.product__info {
-    color: #fff;
-}
-
-.product__name {
-    font-family: 'Lora', serif;
-    font-size: 48px;
-    margin-bottom: 40px;
-}
-
-.product__description {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    line-height: 30px;
-    width: 410px;
-    font-weight: 200;
-    margin-bottom: 40px;
-}
-
-.product__link {
-    font-size: 18px;
-    font-weight: 600;
+.recipe-intro i {
     display: block;
-    width: 150px;
-    padding: 10px;
+    color: #4F4F4F;
+    line-height: 5px;
 }
 
-.product__link:hover {
-    transform: translateY(-20%);
-}
-
-.more-icon {
-    margin-left: 8px;
-}
-
-.product__img-wrap {
-    position: relative;
-}
-
-.product__img {
+.recipe-img {
     width: 100%;
+    border-radius: 12px;
 }
 
-.product__designer {
-    width: 410px;
-    height: 190px;
-    padding: 20px;
-    background-color: #181719;
-    color: #fff;
-    position: absolute;
-    bottom: -95px;
-    left: 38%;
-}
-
-.designer__container {
-    display: flex;
-   
-}
-
-.designer__img {
-    width: 50px;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-.designer__info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.designer__name {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.designer__position {
-    font-size: 12px;
-    color: #828282;
-}
-
-.product__design-info {
-    font-family: 'Lora', serif;
+/* recipe info */
+.recipe-info__item-heading {
+    font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: 700;
-    line-height: 30px;
-    width: 200px;
-    margin-top: 10px;
+    color: var(--text-color);
+}
+
+/* ingredient */
+.ingredient__item-heading {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-color);
+    margin: 32px 0;
+}
+
+.ingerdient__step {
+    max-width: 600px;
+    margin-bottom: 14px;
+    display: flex;
+}
+
+.ingerdient__step input {
+    transform: scale(1.3);
+    margin-right: 16px;
+}
+
+.ingerdient__step span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-color);
+}
+
+/* instructions */
+.instruction__item {
+    display: flex;
+    margin-top: 28px;
+}
+
+.instruction__item-number-order {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 32px;
+    min-width: 36px;
+    height: 36px;
+    background-color: orange;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.instruction__item span {
+    display: block;
+    max-width: 528px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Statistic */
+.recipe-info__statistics {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 367px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.statistic__item {
+    margin-left: 42px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.statistic__item i { 
+    margin-right: 14px;
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.statistic__label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12px;
+    color: #BDBDBD;
+    margin-bottom: 4px;
+}
+
+.statistic__number {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    color: var(--text-color);
+}
+
+.yeilds i {
+    color: orange;
+}
+
+.yeilds .statistic__number {
+    color: orange;
+}
+
+/* source */
+.source {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 24px;
+    color: #BDBDBD;
+    margin-top: 60px;
 }
 
 /* footer */
 .footer {
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    font-weight: 600;
     color: #A9A9A9;
     text-align: center;
-    margin-top: 100px;
+    margin: 100px 0 17px 0;
 }
